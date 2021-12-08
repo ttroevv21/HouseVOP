@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Raleway';
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header start */
+
+.header {
+    background-color: #242b33;
+    background: url(../img/HeaderImage.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    color: #fff;
+}
+
+.nav-item {
+    margin-left: 15px;
+    font-size: 14px;
+
+}
+
+.hero__title {
+    color: #d4c17f;
+    text-align: center;
+    font-size: 48px;
+
+    margin-top: 168px;
+}
+
+.hero-mouse {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.hero-contacts {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    padding-bottom: 150px;
+    padding-top: 150px;
+}
+/* Header end */
+
+/* Section-1 start */
+.section-1 {
+    background-color: #242b33;
+    color: #fff;
+
+    position: relative;
+}
+
+.roman-2 {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+}
+
+.advantages {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.advantages__block {
+    width: 200px;
+    text-align: center;
+}
+
+.advantages__block img {
+    margin-bottom: 48px;
+}
+/* Section-1 end */
+
+/* Section-2 start */
+
+.section-2 {
+    background-color: #242b33;
+    padding-bottom: 150px;
+
+    position: relative;
+}
+
+.roman-3 {
+    position: absolute;
+
+    top: 0;
+    left: 5px;
+}
+
+.our-apartments h2 {
+    color: #d4c17f;
+    font-size: 36px;
+    margin-bottom: 20px;
+
+    font-family: 'Playfair Display', serif;
+}
+
+.first_block, .second_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first_block {
+    margin-bottom: 20px;
+}
+
+.apartment-block {
+    width: 49%;
+    position: relative;
+}
+
+.apartment-block p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.apartment-block img {
+    width: 100%;
+}
+/* Section-2 end */
+
+/* Footer start */
+
+.footer {
+    background-color: #242b33;
+    background-image: url(../img/FooterBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 100px 0;
+}
+
+.footer h2 {
+    color: #d4c17f;
+    font-size: 36px;
+
+    font-family: 'Playfair Display', serif;
+
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    font-family: 'Raleway Regular', serif;
+    color: #fff;
+}
+
+.footer_blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left, .footer__right {
+    width: 49%;
+}
+
+.footer__right>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__right>div div {
+    width: 49%;
+}
+
+.footer__right input {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(197, 197, 194, 0.2);
+    /* opacity: 0.2; */
+    border: none;
+}
+
+.footer__right input::placeholder {
+    color: #fff;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.footer__right button {
+    width: 100%;
+    padding: 14px;
+    background-color: #D4C17F;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+
+    border: none;
+    cursor: pointer;
+}
+
+.footer__right p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer__right>div:last-child {
+    margin-top: 30px;
+
+    align-items: center;
+}
+
+/* Адаптивка */
+
+@media all and (max-width: 804px) {
+    .advantages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages__block {
+        margin-bottom: 20px;
+    }
+
+    .advantages__block img {
+        padding-bottom: 15px;
+    }
+    .roman-2, .roman-3 {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .footer_blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__left {
+        margin-bottom: 30px;
+    }
+    .footer__left, .footer__right {
+        width: 80%;
+    }
+    .footer h2 {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .nav__right {
+        display: none;
+    }
+}
+
+@media all and (max-width: 583px) {
+    .footer__right>div {
+        flex-direction: column;
+    }
+    .footer__right>div div {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
